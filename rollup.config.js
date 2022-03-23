@@ -8,7 +8,7 @@ export default [
   {
     input: "src/index.ts",
     output: {
-      name: "abc",
+      name: "react-flex-images",
       file: "build/index.js",
       format: "umd",
     },
@@ -17,7 +17,7 @@ export default [
   {
     input: "demo/index.tsx",
     output: {
-      file: "build/demo.js",
+      file: "demo/index.js",
       format: "umd",
     },
     plugins: [

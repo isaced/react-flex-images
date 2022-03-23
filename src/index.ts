@@ -1,4 +1,7 @@
-console.log('hello~');
-let a = 1;
+import FlexImagesContainer from './components/container';
+import FlexImagesItem from './components/item';
 
-export { a };
+export {
+  FlexImagesContainer,
+  FlexImagesItem
+};
