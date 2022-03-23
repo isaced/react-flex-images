@@ -2,6 +2,16 @@
   "name": "react-flex-images",
   "version": "0.1.0",
   "description": "A lightweight react wrapper for creating fluid galleries as seen on Flickr and Google Images.",
+  "keywords": [
+    "react",
+    "gallery",
+    "pixabay"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/isaced/react-flex-images"
+  },
+  "license": "MIT",
   "main": "dist/index.js",
   "scripts": {
     "build": "rollup -c",
