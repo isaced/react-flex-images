@@ -3,6 +3,7 @@ import commonjs from "@rollup/plugin-commonjs";
 import typescript from "@rollup/plugin-typescript";
 import serve from "rollup-plugin-serve";
 import replace from "@rollup/plugin-replace";
+import styles from "rollup-plugin-styles";
 
 export default [
   {
@@ -12,12 +13,12 @@ export default [
       file: "dist/index.js",
       format: "umd",
     },
-    plugins: [commonjs(), typescript()],
+    plugins: [commonjs(), typescript(), styles()],
   },
   {
     input: "demo/index.tsx",
     output: {
-      file: "demo/index.js",
+      file: "demo/demo.js",
       format: "umd",
     },
     plugins: [
@@ -27,6 +28,7 @@ export default [
       nodeResolve(),
       commonjs(),
       typescript(),
+      styles(),
       serve(["build", "demo"]),
     ],
   },
