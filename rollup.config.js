@@ -9,7 +9,7 @@ export default [
     input: "src/index.ts",
     output: {
       name: "react-flex-images",
-      file: "build/index.js",
+      file: "dist/index.js",
       format: "umd",
     },
     plugins: [commonjs(), typescript()],
