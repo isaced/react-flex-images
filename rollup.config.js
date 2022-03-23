@@ -18,7 +18,7 @@ export default [
   {
     input: "demo/index.tsx",
     output: {
-      file: "demo/demo.js",
+      file: "build/demo.js",
       format: "umd",
     },
     plugins: [
