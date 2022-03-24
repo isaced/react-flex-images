@@ -4,6 +4,7 @@ A lightweight react wrapper for creating fluid galleries as seen on Flickr and G
 
 ## ✨ Features 
 
+- Lightweight: 4.8 kB of JavaScript - less than 1.8 kB gzipped
 - Source images/objects can have any size
 - Responsive
 - Equal margins between images controlled via CSS
