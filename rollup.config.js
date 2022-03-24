@@ -5,6 +5,8 @@ import serve from "rollup-plugin-serve";
 import replace from "@rollup/plugin-replace";
 import styles from "rollup-plugin-styles";
 
+const dev = process.env.NODE_ENV === "development";
+
 export default [
   {
     input: "src/index.ts",
@@ -29,7 +31,7 @@ export default [
       commonjs(),
       typescript(),
       styles(),
-      serve(["build", "demo"]),
+      dev ? serve(["build", "demo"]) : null,
     ],
   },
 ];

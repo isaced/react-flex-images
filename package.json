@@ -15,7 +15,7 @@
   "main": "dist/index.js",
   "scripts": {
     "build": "rollup -c",
-    "start": "rollup -c -w"
+    "start": "NODE_ENV=development rollup -c -w"
   },
   "devDependencies": {
     "@rollup/plugin-babel": "^5.3.1",
