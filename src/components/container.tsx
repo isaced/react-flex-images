@@ -1,23 +1,47 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 import flexImages from "../flex-images";
 
-interface Props {
+interface FlexImagesProps {
+  /**
+   * items
+   */
   children?: React.ReactNode;
+
+  /**
+   * Maximum height of a row. Default is `300`.
+   */
   rowHeight?: number;
+
+  /**
+   * Maximum number of rows to display. Images/Objects exceeding this row are hidden. Default is `null`.
+   */
+  maxRows?: number;
+
+  /**
+   * Hide incomplete last row of images/objects. Default is `false`.
+   */
+  truncate?: boolean;
 }
 
-export default function FlexImagesContainer(props: Props) {
-  const rowHeight = props.rowHeight || 300;
+/**
+ * react-flex-images container.
+ */
+export default function FlexImagesContainer(props: FlexImagesProps) {
+  const { rowHeight = 300, maxRows = null, truncate = false } = props;
 
   useEffect(() => {
     setTimeout(() => {
-      flexImages({ selector: ".flex-images", rowHeight });
+      layout();
     }, 100);
 
     setTimeout(() => {
-      flexImages({ selector: ".flex-images", rowHeight });
+      layout();
     }, 5000);
   });
+
+  const layout = () => {
+    flexImages({ selector: ".flex-images", rowHeight, maxRows, truncate });
+  };
 
   return <div className="flex-images">{props.children}</div>;
 }
