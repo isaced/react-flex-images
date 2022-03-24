@@ -2,6 +2,8 @@
 
 A lightweight react wrapper for creating fluid galleries as seen on Flickr and Google Images, based on [Pixabay/JavaScript-flexImages](https://github.com/Pixabay/JavaScript-flexImages).
 
+English | [简体中文](./README-zh_CN.md)
+
 ## ✨ Features 
 
 - Lightweight: 4.8 kB of JavaScript - less than 1.8 kB gzipped
