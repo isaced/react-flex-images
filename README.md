@@ -24,7 +24,7 @@ import { FlexImagesContainer, FlexImagesItem } from "react-flex-images";
 
 const App = () => (
   <>
-    <FlexImagesContainer>
+    <FlexImagesContainer rowHeight={300}>
         <FlexImagesItem imgUrl="..." />
         <FlexImagesItem imgUrl="..." />
         ...
@@ -32,3 +32,11 @@ const App = () => (
   </>
 );
 ```
+
+## Settings
+
+| Property  	| Default 	| Description                                                                      	|
+|-----------	|---------	|----------------------------------------------------------------------------------	|
+| rowHeight 	| 300     	| Maximum height of a row.                                                         	|
+| maxRows   	| null    	| Maximum number of rows to display. Images/Objects exceeding this row are hidden. 	|
+| truncate  	| false   	| Hide incomplete last row of images/objects.                                      	|
