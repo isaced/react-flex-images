@@ -1,4 +1,4 @@
-# react-flex-images ![npm](https://img.shields.io/npm/v/react-flex-images.svg?style=flat-square)
+# react-flex-images [![npm](https://img.shields.io/npm/v/react-flex-images.svg?style=flat-square)](https://www.npmjs.com/package/react-flex-images)
 
 A lightweight react wrapper for creating fluid galleries as seen on Flickr and Google Images, based on [Pixabay/JavaScript-flexImages](https://github.com/Pixabay/JavaScript-flexImages).
 
