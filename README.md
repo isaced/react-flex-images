@@ -11,6 +11,13 @@ A lightweight react wrapper for creating fluid galleries as seen on Flickr and G
 - AJAX ready, e.g. for infinite scrolling
 - Layout options to control e.g. the maximum number of rows - or whether or not to display an incomplete (last) row.
 
+## 📃 Example
+
+![Preview](https://user-images.githubusercontent.com/2088605/159846905-eddb7ef8-b710-4ca5-bd06-0c373cb510fe.png)
+
+Live preview on [CodeSandbox](https://codesandbox.io/s/react-flex-images-example-c26qfu).
+
+
 ## 📦 Install 
 
 ```bash
