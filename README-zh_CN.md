@@ -2,7 +2,7 @@
 
 一个轻量级的封装实现类似 Pixabay/Flickr/Google Images 的横向瀑布流（画廊）布局，基于 [Pixabay/JavaScript-flexImages](https://github.com/Pixabay/JavaScript-flexImages) 开发。
 
-[English](https://github.com/isaced/react-flex-images/blob/main/README.md) | 简体中文 
+[English](./README.md) | 简体中文
 
 ## ✨ 特性 
 
