@@ -1,6 +1,6 @@
 {
   "name": "react-flex-images",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "A lightweight react wrapper for creating fluid galleries as seen on Flickr and Google Images.",
   "keywords": [
     "react",
