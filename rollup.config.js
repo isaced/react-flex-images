@@ -22,7 +22,14 @@ const config = [];
     },
     plugins: [
       commonjs(),
-      typescript(),
+      typescript({
+        tsconfig: "./tsconfig.json",
+        include: ["src/**/*.ts", "src/**/*.tsx"],
+        compilerOptions: {
+          declaration: true,
+          declarationDir: "types",
+        },
+      }),
       styles(),
       terser({
         output: {
@@ -43,6 +50,7 @@ dev &&
     plugins: [
       replace({
         "process.env.NODE_ENV": JSON.stringify("development"),
+        preventAssignment: true,
       }),
       nodeResolve(),
       commonjs(),

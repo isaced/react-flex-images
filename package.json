@@ -16,6 +16,7 @@
     "dist"
   ],
   "main": "dist/index.js",
+  "types": "dist/types",
   "scripts": {
     "build": "rollup -c",
     "start": "NODE_ENV=development rollup -c -w"
