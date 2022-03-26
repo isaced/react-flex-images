@@ -1,24 +1,20 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 
 interface Props {
   imgUrl: string;
+  imgWidth: number;
+  imgHeight: number;
+  style?: React.CSSProperties;
+  coverStyle?: React.CSSProperties;
+  className?: string;
 }
 
 export default function FlexImagesItem(props: Props) {
-  const [imgWidth, setImgWidth] = useState(0);
-  const [imgHeight, setImgHeight] = useState(0);
+  const { className, style, coverStyle } = props;
 
   return (
-    <div className="item" data-w={imgWidth} data-h={imgHeight}>
-      <img
-        src={props.imgUrl}
-        onLoad={(e: any) => {
-          const w = e.target.naturalWidth;
-          const h = e.target.naturalHeight;
-          setImgWidth(w);
-          setImgHeight(h);
-        }}
-      />
+    <div className={"flex-images-item" + (className ? ` ${className}` : "")} style={{ ...style, ...coverStyle }}>
+      <img src={props.imgUrl} />
     </div>
   );
 }
