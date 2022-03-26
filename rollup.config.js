@@ -46,6 +46,7 @@ dev &&
     output: {
       file: "build/demo.js",
       format: "umd",
+      sourcemap: true,
     },
     plugins: [
       replace({
@@ -56,7 +57,6 @@ dev &&
       commonjs(),
       typescript(),
       styles(),
-      terser(),
       serve(["build", "demo"]),
     ],
   });
