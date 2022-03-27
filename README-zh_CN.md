@@ -34,9 +34,9 @@ import { FlexImagesContainer, FlexImagesItem } from "react-flex-images";
 
 const App = () => (
   <>
-    <FlexImagesContainer rowHeight={300}>
-        <FlexImagesItem imgUrl="..." />
-        <FlexImagesItem imgUrl="..." />
+    <FlexImagesContainer rowHeight={300} maxRows={20} truncate>
+        <FlexImagesItem imgUrl="..." imgWidth={...} imgHeight={...} />
+        <FlexImagesItem imgUrl="..." imgWidth={...} imgHeight={...} />
         ...
     </FlexImagesContainer>
   </>
