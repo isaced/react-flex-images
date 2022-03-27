@@ -35,6 +35,11 @@ interface ChildrenWrap {
 
 /**
  * react-flex-images container.
+ *
+ * Examle:
+ *    <FlexImagesContainer>
+ *        <FlexImagesItem imgUrl={...} imgWidth={...} imgHeight={...} />
+ *    </FlexImagesContainer>
  */
 export default function FlexImagesContainer(props: FlexImagesProps) {
   const { rowHeight = 300, maxRows = null, truncate = false } = props;
