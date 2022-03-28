@@ -18,7 +18,7 @@
 
 ![Preview](https://user-images.githubusercontent.com/2088605/159846905-eddb7ef8-b710-4ca5-bd06-0c373cb510fe.png)
 
-在 [CodeSandbox](https://codesandbox.io/s/react-flex-images-example-c26qfu) 上实时预览
+[![EditOnCodeSanbox](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/react-flex-images-example-c26qfu)
 
 
 ## 📦 安装 
