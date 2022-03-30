@@ -19,6 +19,7 @@ const config = [];
       name: "react-flex-images",
       file: "dist/index.js",
       format: "umd",
+      sourcemap: true,
     },
     plugins: [
       commonjs(),
@@ -28,6 +29,7 @@ const config = [];
         compilerOptions: {
           declaration: true,
           declarationDir: "types",
+          declarationMap: true,
         },
       }),
       styles(),
