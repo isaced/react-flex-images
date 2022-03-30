@@ -1,4 +1,4 @@
-import React, { useEffect, useLayoutEffect, useReducer, useRef } from "react";
+import React, { useEffect, useLayoutEffect, useReducer, useRef, useState } from "react";
 
 interface FlexImagesProps {
   /**
@@ -45,6 +45,7 @@ export default function FlexImagesContainer(props: FlexImagesProps) {
   const { rowHeight = 300, maxRows = null, truncate = false } = props;
   const selfRef = useRef<HTMLInputElement | null>(null);
   const [, forceRender] = useReducer((s) => s + 1, 0);
+  const [rerender, setRerender] = useState(false);
 
   // Calculate after first layout
   useLayoutEffect(forceRender, []);
@@ -107,6 +108,7 @@ export default function FlexImagesContainer(props: FlexImagesProps) {
 
       if (curRowWidth > maxWidth) {
         const marginInRow = childMargin * rowItems.length;
+
         // Calculate scaling ratio based on maxWidth
         const ratio = (maxWidth - marginInRow) / (curRowWidth - marginInRow);
         // Set the size of each element in this row
@@ -127,6 +129,11 @@ export default function FlexImagesContainer(props: FlexImagesProps) {
     // Layout last row
     if (rowItems.length > 0 && !truncate) {
       displayItems?.push(...rowItems);
+    }
+
+    if (!rerender) {
+      setRerender(true);
+      setTimeout(forceRender, 0);
     }
 
     return displayItems?.map((childWrap) => {
