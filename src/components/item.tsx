@@ -25,21 +25,16 @@ interface Props {
    * The class name of the image item.
    */
   className?: string;
-
-  /**
-   * do not use this prop.
-   */
-  coverStyle?: React.CSSProperties;
 }
 
 /**
  * react-flex-images item.
  */
 export default function FlexImagesItem(props: Props) {
-  const { className, style, coverStyle } = props;
+  const { className, style } = props;
 
   return (
-    <div className={"flex-images-item" + (className ? ` ${className}` : "")} style={{ ...style, ...coverStyle }}>
+    <div className={"flex-images-item" + (className ? ` ${className}` : "")} style={style}>
       <img src={props.imgUrl} />
     </div>
   );

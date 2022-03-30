@@ -137,8 +137,10 @@ export default function FlexImagesContainer(props: FlexImagesProps) {
     }
 
     return displayItems?.map((childWrap) => {
-      return React.cloneElement(childWrap.child as React.ReactElement, {
-        coverStyle: {
+      const child = childWrap.child as React.ReactElement;
+      return React.cloneElement(child, {
+        style: {
+          ...child.props.style,
           width: childWrap.width,
           height: childWrap.height,
         },
