@@ -1,4 +1,5 @@
 import React, { useEffect, useLayoutEffect, useReducer, useRef, useState } from "react";
+import FlexImagesItem from "./item";
 
 interface FlexImagesProps {
   /**
@@ -138,6 +139,12 @@ export default function FlexImagesContainer(props: FlexImagesProps) {
 
     return displayItems?.map((childWrap) => {
       const child = childWrap.child as React.ReactElement;
+
+      if (child.type !== FlexImagesItem) {
+        return child;
+      }
+
+      // Just clone the child if it's a FlexImagesItem
       return React.cloneElement(child, {
         style: {
           ...child.props.style,
