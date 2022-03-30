@@ -1,7 +1,12 @@
 import React, { useContext } from "react";
 import FlexImagesContext from "./FlexImagesContext";
 
-interface Props {
+interface FlexImagesItemProps {
+  /**
+   * items
+   */
+  children?: React.ReactNode;
+
   /**
    * The url of the image item.
    */
@@ -26,19 +31,28 @@ interface Props {
    * The class name of the image item.
    */
   className?: string;
+
+  /**
+   * The onClick event of the image item.
+   */
+  onClick?: React.MouseEventHandler | undefined;
 }
 
 /**
  * react-flex-images item.
  */
-export default function FlexImagesItem(props: Props) {
-  const { className, style } = props;
+export default function FlexImagesItem(props: FlexImagesItemProps) {
+  const { children, className, style, onClick } = props;
   const contextConfig = useContext(FlexImagesContext);
   const { orientation, lineGap } = contextConfig || {};
   const baseClassName = orientation === "horizontal" ? "flex-images-item" : "flex-images-vertical-item";
   return (
-    <div className={baseClassName + (className ? ` ${className}` : "")} style={{ ...style, marginBottom: lineGap }}>
-      <img src={props.imgUrl} />
+    <div
+      className={baseClassName + (className ? ` ${className}` : "")}
+      style={{ ...style, marginBottom: lineGap }}
+      onClick={onClick}
+    >
+      {children}
     </div>
   );
 }

@@ -10,7 +10,9 @@ function App() {
     return (
       <FlexImagesContainer orientation="horizontal">
         {data.map((imageInfo, idx) => (
-          <FlexImagesItem key={idx} imgUrl={imageInfo.url} imgWidth={imageInfo.width} imgHeight={imageInfo.height} />
+          <FlexImagesItem key={idx} imgUrl={imageInfo.url} imgWidth={imageInfo.width} imgHeight={imageInfo.height}>
+            <img src={imageInfo.url} />
+          </FlexImagesItem>
         ))}
       </FlexImagesContainer>
     );
@@ -20,7 +22,10 @@ function App() {
     return (
       <FlexImagesContainer orientation="vertical" columnGap="10px" lineGap="10px">
         {data.map((imageInfo, idx) => (
-          <FlexImagesItem key={idx} imgUrl={imageInfo.url} />
+          <FlexImagesItem key={idx} imgUrl={imageInfo.url} style={{ position: "relative" }}>
+            <div style={{ position: "absolute" }}>{idx}</div>
+            <img src={imageInfo.url} />
+          </FlexImagesItem>
         ))}
       </FlexImagesContainer>
     );
